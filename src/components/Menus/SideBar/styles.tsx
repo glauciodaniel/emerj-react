@@ -13,6 +13,7 @@ export const SideBarNav = styled.nav`
         padding:0;
         display: flex;
         > li {
+            list-style: none;
             min-width: 100px;
             text-align: center;
             &:hover {
