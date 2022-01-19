@@ -5,7 +5,6 @@ import  styled  from 'styled-components';
 import createGlobalStyle from '../styles/global';
 
 const GlobalStyle = createGlobalStyle;
-
 const Container = styled.div`
 
     width: 100vw;
@@ -15,13 +14,13 @@ const Container = styled.div`
 
 `
 
-const Home:React.FC = () =>(
+const About:React.FC = () =>(
     <Container>
         <GlobalStyle />
         <SideBar />
-        <Main welcome="Bem vindo" route="Home"/>
+        <Main welcome="Quem Somos" route="Quem Somos"/>
     </Container>
 )
 
 
-export default Home;
+export default About;

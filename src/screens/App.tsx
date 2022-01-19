@@ -2,9 +2,6 @@ import React from 'react';
 import Main from '../components/Main';
 import SideBar from '../components/Menus/SideBar';
 import  styled  from 'styled-components';
-import createGlobalStyle from '../styles/global';
-
-const GlobalStyle = createGlobalStyle;
 
 const Container = styled.div`
 
@@ -15,13 +12,12 @@ const Container = styled.div`
 
 `
 
-const Home:React.FC = () =>(
+const App:React.FC = () =>(
     <Container>
-        <GlobalStyle />
         <SideBar />
-        <Main welcome="Bem vindo" route="Home"/>
+        <Main welcome="Bem vindo" route="App"/>
     </Container>
 )
 
 
-export default Home;
+export default App;

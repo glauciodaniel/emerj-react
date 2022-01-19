@@ -30,12 +30,12 @@ const H2 = styled.h2`
     color: ${color};
 `
 
-interface NavBarProps {
+interface MainProps {
     welcome: string;
     route: string; 
 }
 
-export default function NavBar({welcome,route}:NavBarProps){
+export default function Main({welcome,route}:MainProps){
 
     return(
     //React Fragment Component
