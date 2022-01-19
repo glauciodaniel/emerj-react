@@ -18,7 +18,7 @@ const Courses:React.FC = () =>(
     <Container>
         <GlobalStyle />
         <SideBar />
-        <Main welcome="Cursos" route="Cursos"/>
+        <Main  welcome="Cursos" route="cursos" />
     </Container>
 )
 
