@@ -5,6 +5,7 @@ import About from './screens/About';
 import App from './screens/App';
 import Contact from './screens/Contact';
 import Courses from './screens/Courses';
+import CoursesSchedules from './screens/CoursesSchedules';
 import Home from './screens/Home';
 
 ReactDOM.render(
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="courses" element={<Courses />} />
+        <Route path="courses-schedules" element={<CoursesSchedules />} />
       </Routes>
   </BrowserRouter>
   ,

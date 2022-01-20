@@ -13,13 +13,13 @@ const SideBarContainer = styled.section`
     transition-property: width;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.5, 0.5, 0.5,);
-    a { width: 200px; color: #f5f6fa; text-decoration: none; display: flex; align-items: center;
+    a { width: 250px; color: #f5f6fa; text-decoration: none; display: flex; align-items: center;
     padding-left: 13px;
         svg {
             margin-right: 30px;
         }
     }
-    ul > li  span.label { width: 100px;}    
+    ul > li  span.label { width: 200px;}    
     a:hover { text-decoration: underline}
     &:hover{
         width: 350px;  

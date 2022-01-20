@@ -3,7 +3,7 @@ import Main from '../components/Main';
 import SideBar from '../components/Menus/SideBar';
 import  styled  from 'styled-components';
 import createGlobalStyle from '../styles/global';
-import CoursesGrid from '../components/CoursesGrid';
+import CoursesSchedulesGrid from '../components/CoursesScheduleGrid';
 
 const GlobalStyle = createGlobalStyle;
 const Container = styled.div`
@@ -15,13 +15,13 @@ const Container = styled.div`
 
 `
 
-const Courses:React.FC = () =>(
+const CoursesSchedules:React.FC = () =>(
     <Container>
         <GlobalStyle />
         <SideBar />
-        <CoursesGrid  welcome="Cursos" route="cursos" />
+        <CoursesSchedulesGrid  welcome="Cursos" route="cursos" />
     </Container>
 )
 
 
-export default Courses;
+export default CoursesSchedules;
