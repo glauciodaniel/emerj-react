@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { DataGrid } from '@mui/x-data-grid';
-import { Breadcrumbs, Link, Typography } from '@mui/material';
+import { Breadcrumbs, Button, Link, Typography } from '@mui/material';
 import axios from 'axios';
 interface Row {
     id: number;
@@ -67,12 +67,17 @@ const Block = styled.div`
     margin: 0 auto;
 
 `
+
+const NewUser = styled.div`
+  position: absolute;
+  right: 5%;
+`
 interface MainProps {
     welcome: string;
     route: string; 
 }
 
-export default function CoursesSchedulesGrid({welcome,route}:MainProps){
+export default function UsersGrid({welcome,route}:MainProps){
 
     const [rows, setRows] = useState<any | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
@@ -108,10 +113,15 @@ export default function CoursesSchedulesGrid({welcome,route}:MainProps){
             color="inherit"
             href="/courses"
         >
-            Cursos
+            Usuários
         </Link>
-        <Typography color="text.primary">Cursos Agendados</Typography>
+        <Typography color="text.primary">Lista de Usuários</Typography>
         </Breadcrumbs>
+            <NewUser>
+              <Button href="/users/new" variant='contained'>
+                  Novo Usuário
+              </Button>
+            </NewUser>
         </Header>     
         <Block>
         <DataGrid

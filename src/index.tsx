@@ -7,6 +7,8 @@ import Contact from './screens/Contact';
 import Courses from './screens/Courses';
 import CoursesSchedules from './screens/CoursesSchedules';
 import Home from './screens/Home';
+import Users from './screens/Users';
+import UsersNew from './screens/UsersNew';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -16,6 +18,8 @@ ReactDOM.render(
         <Route path="contact" element={<Contact />} />
         <Route path="courses" element={<Courses />} />
         <Route path="courses-schedules" element={<CoursesSchedules />} />
+        <Route path="users" element={<Users />}/>
+        <Route path="users/new" element={<UsersNew />} />
       </Routes>
   </BrowserRouter>
   ,
