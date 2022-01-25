@@ -37,8 +37,10 @@ export default function SignIn(){
 const [formData, setFormData] = useState(defaultFormData);
 //destructuring Assignment
 const {email, password} = formData;
+
 const [success, setSuccess] =useState(false);
 const [error, setError] =useState<string | boolean>(false);
+
 const [message, setMessage] = useState<Message>({
     severity:'error',
     text:'',
@@ -53,25 +55,35 @@ const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
 }
 const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await axios.post(
-        'http://20.120.7.70/auth/login', formData
-    );
-    if(response.data.accessToken){
-        localStorage.setItem("accessToken", response.data.accessToken);
-        setSuccess(true);
-        setMessage({
-            severity: 'success',
-            text:'Usuário autenticado com sucesso!',
-            status:200
-        })
-    }else {
-        setError("Usuário inexistente ou senha inválida");
-        setMessage({
-            severity: 'error',
-            text:'Usuário inexistente ou senha inválida!',
-            status:403
-        })
+
+    try{
+        const response = await axios.post(
+            'http://20.120.7.70/auth/login', formData
+        );
+            if(response.data.accessToken){
+            localStorage.setItem("accessToken", response.data.accessToken);
+          //setSuccess(true);
+            setMessage({
+                severity: 'success',
+                text:'Usuário autenticado com sucesso!',
+                status:200
+            })
+
+            setTimeout(()=>{
+                document.location.href = '/'
+            },4000)
+        }        
+    }catch(e: any){
+          //setError("Usuário inexistente ou senha inválida");
+            setMessage({
+                severity: 'error',
+                text:'Usuário inexistente ou senha inválida!',
+                status:403
+            })
     }
+    
+
+   
 }
     return (
         <Container>
@@ -105,10 +117,13 @@ const onSubmit = async (e: React.FormEvent) => {
                         type="submit"
                         >Enviar</Button> 
         {success &&  <Alert severity="success">Usuário autenticado com sucesso</Alert>}
+
         {error &&  <Alert severity="error">{error}</Alert>}
 
         {message.text ? (
-            <Alert severity={message.severity}>{message.text}</Alert>
+           
+            <Alert severity={message.severity} variant="outlined">{message.text}</Alert>
+         
         ):('')}
 
           

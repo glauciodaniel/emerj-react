@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './screens/About';
 import App from './screens/App';
+import Checkout from './screens/Checkout';
 import Contact from './screens/Contact';
 import Courses from './screens/Courses';
 import CoursesSchedules from './screens/CoursesSchedules';
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route path="users" element={<Users />}/>
         <Route path="users/new" element={<UsersNew />} />
         <Route path="login" element={<Login />} />
+        <Route path="checkout" element={<Checkout />} />
       </Routes>
   </BrowserRouter>
   ,

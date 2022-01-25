@@ -19,8 +19,6 @@ export default function Login(){
     return (
     <Container>
         <GlobalStyle />
-        <SideBar />
-
         <SignIn />
     </Container>
     )

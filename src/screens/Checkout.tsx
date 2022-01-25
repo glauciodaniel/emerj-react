@@ -4,6 +4,7 @@ import SideBar from '../components/Menus/SideBar';
 import  styled  from 'styled-components';
 import createGlobalStyle from '../styles/global';
 import UsersGrid from '../components/usersGrid';
+import CheckoutGroup from '../components/CheckoutGroup';
 
 const GlobalStyle = createGlobalStyle;
 const Container = styled.div`
@@ -15,17 +16,17 @@ const Container = styled.div`
 
 `
 
-const Users:React.FC = () =>(
+const Checkout:React.FC = () =>(
     <Container>
         <GlobalStyle />
         <SideBar />
 
-      { /*ocultando localStorage.getItem("accessToken") && <UsersGrid  welcome="Usuários" route="users" />*/}
+      { /*ocultando localStorage.getItem("accessToken") && <CheckoutGrid  welcome="Usuários" route="Checkout" />*/}
       
-      {localStorage.getItem("accessToken") ? <UsersGrid  welcome="Usuários" route="users" /> : document.location.href = '/login'}
+      {localStorage.getItem("accessToken") ? <CheckoutGroup /> : document.location.href = '/login'}
 
     </Container>
 )
 
 
-export default Users;
+export default Checkout;
