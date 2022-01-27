@@ -1,40 +1,43 @@
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import SchoolIcon from '@mui/icons-material/School';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import PeopleIcon from '@mui/icons-material/People';
+import {
+    Home,
+    Info,
+    School,
+    ContactMail,
+    CalendarToday,
+    People
+} from '@mui/icons-material';
+
 
 export const menu = [
     {
         id: 0,
         label:"Home",
         link:"/",
-        icon: <HomeIcon />
+        icon: <Home />
     },{
         id: 1,
         label:"Quem Somos",
         link:"/about",
-        icon: <InfoIcon />
+        icon: <Info />
     },{
         id: 2,
         label:"Cursos",
         link:"/courses",
-        icon: <SchoolIcon />,
+        icon: <School />,
     },{
         id: 3,
         label:"Cursos Agendados",
         link:"/courses-schedules",
-        icon: <CalendarTodayIcon />,
+        icon: <CalendarToday />,
     },{
         id: 4,
         label:"Contato",
         link:"/contact",
-        icon: <ContactMailIcon />,
+        icon: <ContactMail />,
     },{
         id: 5,
         label:"Usuários",
         link:"/users",
-        icon: <PeopleIcon />,
+        icon: <People />,
     },
 ]
